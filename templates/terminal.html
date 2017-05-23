@@ -49,11 +49,72 @@ THE SOFTWARE.
 	#b {
 		color: #ff0096;
 	}
+    #user-caption{
+        color: #ffffff;
+        background-color: #000000;
+        border: None;
+        lighting-color: #fff;
+        outline-color: black;
+        font-size:14px;
+
+    }
+    #prompt{
+        color : white;
+        font-family: Courier, monospace;
+        font-size:14px;
+
+    }
+    #inputfield{
+        background-color: black;
+        color: white;
+        border: None;
+        lighting-color: #fff;
+        outline-color: black;
+        font-family: Courier, monospace;
+        font-size:14px;
+
+    }
 </style>
 </head>
 <body>
 
 
-<div id="console"><div id="a">surajpai@root:    </div>cat </div>
+<div id="console">Welcome to Suraj Pai's personal website<br>
+    <table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield" name="q" type="text" class="cmdline" autocomplete="off" value=''></td></tr></tbody></table>
+</div>
+
+<script>
+    $(document).ready(function() {
+        setInterval('cursorAnimation()', 600);
+    });
+
+    $("#inputfield").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        if ($('#inputfield').val() == "ls"){
+            document.getElementById('console').innerHTML += '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>projects.txt</td></tr><tr><td>skills.txt</td><td>samples.git</td></tr></tbody></table><br><table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield" name="q" type="text" class="cmdline" autocomplete="off" value=""></td></tr></tbody></table>'
+              $("#inputfield").keypress(function(event) {
+                  if (event.which == 13) {
+                      event.preventDefault();
+                      if ($('#inputfield').val() == "ls"){
+                          document.getElementById('console').innerHTML += '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>projects.txt</td></tr><tr><td>skills.txt</td><td>samples.git</td></tr></tbody></table><br><table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield" name="q" type="text" class="cmdline" autocomplete="off" value=""></td></tr></tbody></table>'
+                      }
+                  }
+              });
+        }
+    }
+
+});
+
+    function cursorAnimation() {
+    $('#cursor').animate({
+        opacity: 0
+    }, 'fast', 'swing').animate({
+        opacity: 1
+    }, 'fast', 'swing');
+}
+
+
+</script>
 </body>
 </html>
