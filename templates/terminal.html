@@ -4,7 +4,7 @@ Copyright (c) 2011 Sam Phippen <samphippen@googlemail.com>
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+to ushttp://3221bf5f.ngrok.io/site/home/e, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
@@ -22,7 +22,9 @@ THE SOFTWARE.
 <html>
 <head>
 <title>Suraj Pai</title>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
 <style type="text/css">
 	body {
 		background-color: #000
@@ -64,7 +66,7 @@ THE SOFTWARE.
         font-size:14px;
 
     }
-    #inputfield{
+    .cmdline{
         background-color: black;
         color: white;
         border: None;
@@ -79,42 +81,78 @@ THE SOFTWARE.
 <body>
 
 
-<div id="console">Welcome to Suraj Pai's personal website<br>
-    <table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield" name="q" type="text" class="cmdline" autocomplete="off" value=''></td></tr></tbody></table>
+
+<div id="console">Welcome to Suraj Pai's personal website<br> Type "help" to find out more about Suraj.
+    <table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield0" name="q" type="text" class="cmdline" autocomplete="off" value=''/></td></tr></tbody></table>
 </div>
 
-<script>
-    $(document).ready(function() {
-        setInterval('cursorAnimation()', 600);
-    });
+<script type="text/javascript">
+    $('#inputfield0').focus();
+    var counter = 0;
+        window.onkeyup = function (e) {
 
-    $("#inputfield").keypress(function(event) {
-    if (event.which == 13) {
-        event.preventDefault();
-        if ($('#inputfield').val() == "ls"){
-            document.getElementById('console').innerHTML += '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>projects.txt</td></tr><tr><td>skills.txt</td><td>samples.git</td></tr></tbody></table><br><table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield" name="q" type="text" class="cmdline" autocomplete="off" value=""></td></tr></tbody></table>'
-              $("#inputfield").keypress(function(event) {
-                  if (event.which == 13) {
-                      event.preventDefault();
-                      if ($('#inputfield').val() == "ls"){
-                          document.getElementById('console').innerHTML += '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>projects.txt</td></tr><tr><td>skills.txt</td><td>samples.git</td></tr></tbody></table><br><table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield" name="q" type="text" class="cmdline" autocomplete="off" value=""></td></tr></tbody></table>'
-                      }
-                  }
-              });
+               var key = e.keyCode ? e.keyCode : e.which;
+            if (key == 13) {
+                slic = get_snippet($('#inputfield'+counter.toString()).val(), 0, 3);
+                alert(slic);
+                if ($('#inputfield'+counter.toString()).val() == "ls") {
+                    counter += 1;
+                    listitem = '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>projects.txt</td></tr><tr><td>skills.txt</td><td>samples.git</td></tr></tbody></table><br>';
+                    $("#console").append(listitem);
+                }
+                else if ($('#inputfield'+counter.toString()).val() == "help") {
+                    counter += 1;
+                    listitem = '<p>You can use the following commands in this terminal, </p><br><table id="user-caption"><tbody><tr><td>ls</td><td>Lists files to explore</td></tr><tr><td>cat filename</td><td>Displays content of the particular file</td></tr><tr><td>clear</td><td>Clear the display</td></tr></tbody></table><br>';
+                    $("#console").append(listitem);
+                }
+                else if ($('#inputfield'+counter.toString()).val() == "clear") {
+                    counter += 1;
+                    document.getElementById('console').innerHTML = '';
+                }
+                else if (slic == "cat") {
+                    var final_len = $('#inputfield'+counter.toString()).val().length;
+                    filename = get_snippet($('#inputfield'+counter.toString()).val(), 4, final_len);
+                    alert(filename);
+                    if ( filename.toString() == 'experience.txt' ){
+                        var exp1 = '<br><table class = "cmdline"><tbody><tr><td>Social Innovator, </td><td>Digital Impact Square ( TCS Foundation and MIT Media Labs)</td></tr><tr><td>June 2016 - Dec 2016</td></tr></tbody></table><ul><li>Pioneered field research at a school for hearing impaired students and helped develop technology to be used as a teaching aid for sign language which would reduce teaching time by a factor of 2. <li> Developed automation scripts in Python to extract data from YouTube videos, process subtitles and run NLP on the text data. Also used speech processing libraries to obtain individual word timings.<li> Met various stakeholders, government officials and private institutions to gain insights from them and improve the product. Discussed with a panel of special educators on what role technology could play in improving lives of the hearing disabled. </ul><br>';
+                        var exp2 = '<br><table class = "cmdline"><tbody><tr><td>Research Intern, </td><td>Manipal Practice School, Manipal Institute of Technology</td></tr><tr><td>Jan 2016 - May 2016</td></tr></tbody></table><ul><li>Developed and tested various optimization algorithms for Supervised Learning ( Mainly MLP, SVMs, Binary MLP, Statistical Classification etc.) to train a Sign Language Classification system. Insights and AUC ROC plots were plotted comparatively offering a clear cut visualization into each algorithms performance.<li>Used the Microsoft Kinect and software APIs to classify 3 gestures in real time. ( Software used: MATLAB and Kinect Runtime Libraries). My role centered around data cleaning and visualizations along with optimizations. <li> Met various stakeholders, government officials and private institutions to gain insights from them and improve the product.<li> Presented the project to a panel of subject experts and researchers and obtained an A+ project rating. </ul>';
+                        var exp3 = '<br><table class = "cmdline"><tbody><tr><td>Participant, </td><td>Stanford Crowd Course Initiative</td></tr><tr><td>2016</td></tr></tbody></table><ul><li>Stanford Crowd Course is an initiative spearheaded by Prof. Sharad Goel, Prof. Amin Saberi and Dr. Rajan Vaish. It facilitates people to collaborate andshare their knowledge with others by creating courses on diverse topics<li>As a part of this initiative, I contributed content mainly to the course, "Practical Machine Learning with Python" and received #21 Thank yous. ( Thank yous are a way of measuring contributions made to the course in scale.)</ul>';
+                        var exp4 = '<br><table class = "cmdline"><tbody><tr><td>Embedded System Developer, </td><td>Go-E-Code Technologies</td></tr><tr><td>June 2015 - Aug 2015</td></tr></tbody></table><ul><li>My responsibilities as a developer: Developed IoT applications on 8051 and ARM based boards Sensor and Timer based projects</ul>';
+                        var desc = exp1 + exp2 + exp3 + exp4;
+                        $("#console").append(desc);
+                    }
+                    else if ( $('#inputfield'+counter.toString()).val().slice(3, final_len) == 'projects.txt'){
+
+                    }
+                     else if ( $('#inputfield'+counter.toString()).val().slice(3, final_len) == 'skills.txt'){
+
+                    }
+                     else if ( $('#inputfield'+counter.toString()).val().slice(3, final_len) == 'samples.git'){
+
+                    }
+
+                    counter += 1;
+                }
+                else {
+                    error = "       Error: command  '" + $('#inputfield'+counter.toString()).val() + "' is not recognized. Please re-enter a valid command or type 'help' to view list of commands";
+                    $("#console").append(error);
+                    $('#inputfield'+counter.toString()).remove();
+
+
+
+                }
+                cmdhead = '<table class="inputtable"><tbody><tr><td><div id="prompt" class="less"><div id="a">surajpai@root:</div></div></td><td class="inputtd"><input id="inputfield' + counter.toString() + '" name="q" type="text" class="cmdline" autocomplete="off" value:""/></td></tr></tbody></table>';
+                $("#console").append(cmdhead);
+                $('#inputfield'+counter.toString()).focus();
+
+            }
         }
+
+    function get_snippet(text, l1, l2) {
+        var slic = text.toString().slice(l1, l2);
+        return slic
     }
-
-});
-
-    function cursorAnimation() {
-    $('#cursor').animate({
-        opacity: 0
-    }, 'fast', 'swing').animate({
-        opacity: 1
-    }, 'fast', 'swing');
-}
-
 
 </script>
 </body>
-</html>
+
