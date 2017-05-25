@@ -6,11 +6,41 @@
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if( key == 9){
-                    alert('Tab pressed');
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "l"){
-                        alert('matched');
                     $('#inputfield'+counter.toString()).val('ls');
                 }
+                if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
+                        if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "e"){
+                            $('#inputfield'+counter.toString()).val('cat experience.txt');
+                        }
+                        if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "a"){
+                            $('#inputfield'+counter.toString()).val('cat achievements.txt');
+                        }
+                        if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "s"){
+                            $('#inputfield'+counter.toString()).val('cat skills.txt');
+                        }
+                        if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 6) == "sa"){
+                            $('#inputfield'+counter.toString()).val('cat samples.git');
+
+                        }
+                        if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "p"){
+                            $('#inputfield'+counter.toString()).val('cat projects.txt');
+                        }
+                        if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 6) == "ed"){
+                            $('#inputfield'+counter.toString()).val('cat education.txt');
+                        }
+                        else {
+                            $('#inputfield'+counter.toString()).val('cat');
+                        }
+                }
+                if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "w"){
+                    $('#inputfield'+counter.toString()).val('wget resume.pdf');
+
+                }
+                if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
+                    $('#inputfield'+counter.toString()).val('clear');
+                }
+
 
                 }
                 if (key == 13) {
