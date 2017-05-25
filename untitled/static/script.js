@@ -8,26 +8,28 @@
                 if( key == 9){
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "l"){
                     $('#inputfield'+counter.toString()).val('ls');
-                }
-                        if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
-                            alert(get_snippet($('#inputfield'+counter.toString()).val(), 4, 5));
-                            if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "e"){
+                    }
+                    if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
+                            var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
+                            var val2 = get_snippet($('#inputfield'+counter.toString()).val(), 4, 6);
+
+                            if ( val.toString() == "e"){
                                 $('#inputfield'+counter.toString()).val('cat experience.txt');
                             }
-                            if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "a"){
+                            if ( val.toString() == "a"){
                                 $('#inputfield'+counter.toString()).val('cat achievements.txt');
                             }
-                            if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "s"){
+                            if ( val.toString() == "s"){
                                 $('#inputfield'+counter.toString()).val('cat skills.txt');
                             }
-                            if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 6) == "sa"){
+                            if ( val2.toString() == "sa"){
                                 $('#inputfield'+counter.toString()).val('cat samples.git');
 
                             }
-                            if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 5) == "p"){
+                            if ( val.toString() == "p"){
                                 $('#inputfield'+counter.toString()).val('cat projects.txt');
                             }
-                            if ( get_snippet($('#inputfield'+counter.toString()).val(), 4, 6) == "ed"){
+                            if ( val2.toString() == "ed"){
                                 $('#inputfield'+counter.toString()).val('cat education.txt');
                             }
                             else {
@@ -41,7 +43,7 @@
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
                         $('#inputfield'+counter.toString()).val('clear');
                     }
-
+                    $('#inputfield'+counter.toString()).focus();
                 }
                 if (key == 13) {
                     slic = get_snippet($('#inputfield'+counter.toString()).val(), 0, 3);
