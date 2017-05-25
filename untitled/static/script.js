@@ -6,6 +6,7 @@
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if( key == 9){
+
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "l"){
                     $('#inputfield'+counter.toString()).val('ls');
                     }
@@ -13,37 +14,36 @@
                             var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
                             var val2 = get_snippet($('#inputfield'+counter.toString()).val(), 4, 6);
 
-                            if ( val.toString() == "e"){
-                                $('#inputfield'+counter.toString()).val('cat experience.txt');
+                            if ( val.toFirstChar() == "e"){
+                                $('#inputfield'+counter.toString()).val('cat experience.txt').focus().val($('#inputfield'+counter.toString()).val());
                             }
-                            if ( val.toString() == "a"){
-                                $('#inputfield'+counter.toString()).val('cat achievements.txt');
+                            if ( val.toFirstChar() == "a"){
+                                $('#inputfield'+counter.toString()).val('cat achievements.txt').focus().val($('#inputfield'+counter.toString()).val());
                             }
-                            if ( val.toString() == "s"){
-                                $('#inputfield'+counter.toString()).val('cat skills.txt');
+                            if ( val.toFirstChar() == "s"){
+                                $('#inputfield'+counter.toString()).val('cat skills.txt').focus().val($('#inputfield'+counter.toString()).val());
                             }
                             if ( val2.toString() == "sa"){
-                                $('#inputfield'+counter.toString()).val('cat samples.git');
+                                $('#inputfield'+counter.toString()).val('cat samples.git').focus().val($('#inputfield'+counter.toString()).val());
 
                             }
-                            if ( val.toString() == "p"){
-                                $('#inputfield'+counter.toString()).val('cat projects.txt');
+                            if ( val.toFirstChar() == "p"){
+                                $('#inputfield'+counter.toString()).val('cat projects.txt').focus().val($('#inputfield'+counter.toString()).val());
                             }
                             if ( val2.toString() == "ed"){
-                                $('#inputfield'+counter.toString()).val('cat education.txt');
+                                $('#inputfield'+counter.toString()).val('cat education.txt').focus().val($('#inputfield'+counter.toString()).val());
                             }
                             else {
-                                $('#inputfield'+counter.toString()).val('cat');
+                                $('#inputfield'+counter.toString()).val('cat').focus().val($('#inputfield'+counter.toString()).val());
                             }
                     }
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "w"){
-                        $('#inputfield'+counter.toString()).val('wget resume.pdf');
+                        $('#inputfield'+counter.toString()).val('wget resume.pdf').focus().val($('#inputfield'+counter.toString()).val());
 
                     }
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
-                        $('#inputfield'+counter.toString()).val('clear');
+                        $('#inputfield'+counter.toString()).val('clear').focus().val($('#inputfield'+counter.toString()).val());
                     }
-                    $('#inputfield'+counter.toString()).focus();
                 }
                 if (key == 13) {
                     slic = get_snippet($('#inputfield'+counter.toString()).val(), 0, 3);
