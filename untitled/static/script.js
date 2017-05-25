@@ -12,7 +12,10 @@
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
 
-                        $('#inputfield'+counter.toString()).val('clear');
+                        var SearchInput = $('#inputfield'+counter.toString()).val('clear');
+                        var strLength= SearchInput.val().length;
+Sear                    SearchInput.focus();
+Sear                    SearchInput[0].setSelectionRange(strLength, strLength);
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
                             var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
