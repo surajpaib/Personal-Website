@@ -6,6 +6,6 @@ from . import views
 # Enter regex url matching here
 
 urlpatterns = [
-    url(r'^home/', views.home, name='home')
+    url(r'^', views.home, name='home')
 
 ]
