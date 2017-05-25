@@ -14,52 +14,43 @@
                             var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
                             var val2 = get_snippet($('#inputfield'+counter.toString()).val(), 4, 6);
 
-                            if ( val == "e"){
-                                $('#inputfield'+counter.toString()).focus();
-                                $('#inputfield'+counter.toString()).val('');
-                                $('#inputfield'+counter.toString()).val('cat experience.txt');
+                            if ( val2.toString() == "ed"){
+
+                                $('#inputfield'+counter.toString()).val('cat education.txt');
                             }
                             else if ( val == "a"){
-                                $('#inputfield'+counter.toString()).focus();
-                                $('#inputfield'+counter.toString()).val('');
+
                                 $('#inputfield'+counter.toString()).val('cat achievements.txt');
                             }
-                            else if ( val == "s"){
-                                $('#inputfield'+counter.toString()).focus();
-                                $('#inputfield'+counter.toString()).val('');
+                            else if ( val2.toString() == "sk"){
+
                                 $('#inputfield'+counter.toString()).val('cat skills.txt');
                             }
-                            else if ( val2.toString() == "sa"){
-                                $('#inputfield'+counter.toString()).focus();
-                                $('#inputfield'+counter.toString()).val('');
+                            else if ( val == "s"){
+
                                 $('#inputfield'+counter.toString()).val('cat samples.git');
 
                             }
                             else if ( val == "p"){
-                                $('#inputfield'+counter.toString()).focus();
-                                $('#inputfield'+counter.toString()).val('');
-                                $('#inputfield'+counter.toString()).val('cat projects.txt');
+
+                                $('#inputfield'+counter.toString()).val('cat projects.txt').putCursorAtEnd();
                             }
-                            else if ( val2 == "ed"){
-                                $('#inputfield'+counter.toString()).focus();
-                                $('#inputfield'+counter.toString()).val('');
-                                $('#inputfield'+counter.toString()).val('cat education.txt');
+                            else if ( val == "e"){
+
+                                $('#inputfield'+counter.toString()).val('cat experience.txt');
                             }
                             else {
-                                $('#inputfield'+counter.toString()).focus();
-                                $('#inputfield'+counter.toString()).val('');
+
                                 $('#inputfield'+counter.toString()).val('cat');
                             }
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "w"){
-                        $('#inputfield'+counter.toString()).focus();
-                        $('#inputfield'+counter.toString()).val('');
+
                         $('#inputfield'+counter.toString()).val('wget resume.pdf');
 
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
-                        $('#inputfield'+counter.toString()).focus();
-                        $('#inputfield'+counter.toString()).val('');
+                   
                         $('#inputfield'+counter.toString()).val('clear');
                     }
                 }
@@ -171,3 +162,24 @@
         var slic = text.toString().slice(l1, l2);
         return slic
     }
+
+
+    jQuery.fn.putCursorAtEnd = function() {
+  return this.each(function() {
+    $(this).focus();
+    // If this function exists...
+    if (this.setSelectionRange) {
+      // ... then use it (Doesn't work in IE)
+      // Double the length because Opera is inconsistent about whether a carriage return is one character or two. Sigh.
+      var len = $(this).val().length * 2;
+      this.setSelectionRange(len, len);
+    } else {
+      // ... otherwise replace the contents with itself
+      // (Doesn't work in Google Chrome)
+      $(this).val($(this).val());
+    }
+    // Scroll to the bottom, in case we're in a tall textarea
+    // (Necessary for Firefox and Google Chrome)
+    this.scrollTop = 999999;
+  });
+};
