@@ -10,6 +10,10 @@
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "l"){
                     $('#inputfield'+counter.toString()).val('ls');
                     }
+                    else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
+
+                        $('#inputfield'+counter.toString()).val('clear');
+                    }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
                             var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
                             var val2 = get_snippet($('#inputfield'+counter.toString()).val(), 4, 6);
@@ -51,10 +55,7 @@
                         $('#inputfield'+counter.toString()).val('wget resume.pdf');
 
                     }
-                    else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
 
-                        $('#inputfield'+counter.toString()).val('clear');
-                    }
                 }
                 if (key == 13) {
                     slic = get_snippet($('#inputfield'+counter.toString()).val(), 0, 3);
