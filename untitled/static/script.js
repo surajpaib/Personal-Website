@@ -125,7 +125,7 @@
                         filename = get_snippet($('#inputfield'+counter.toString()).val(), 5, final_len1);
                         if (filename.toString() == "resume.pdf"){
                             var link = document.createElement('a');
-                            link.href = 'https://www.docdroid.net/file/download/kI2JBxa/surajpai-cv-.pdf';
+                            link.href = 'https://www.pdf-archive.com/2017/05/25/surajpai-cv/surajpai-cv.pdf';
                             link.download = 'SurajPaiCV.pdf';
                             link.click();
                         }
