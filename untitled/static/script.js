@@ -3,7 +3,7 @@
  */
   $('#inputfield0').focus();
     var counter = 0;
-        window.onkeyup = function (e) {
+        window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if( key == 9){
                     alert('Tab pressed');
