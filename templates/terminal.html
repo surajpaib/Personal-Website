@@ -5,7 +5,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     {% load static %}
 <link href="{% static "style.css" %}" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="{% static "script.js" %}"></script>
 </head>
 <body>
 
@@ -14,8 +13,8 @@
 <div id="console">Welcome to Suraj Pai's personal website<br> Type "help" to find out more about Suraj.
     <table class="inputtable"><tbody><tr><td><div id="a">surajpai@root:</div></td><td class="inputtd"><input id="inputfield0" name="q" type="text" class="cmdline" autocomplete="off" value=''/></td></tr></tbody></table>
 </div>
-
-
-{# Javascript Functions below  #}
+<script type="text/javascript" src="{% static "script.js" %}"></script>
 </body>
+</html>
+
 
