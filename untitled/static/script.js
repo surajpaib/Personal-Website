@@ -6,7 +6,9 @@
         window.onkeyup = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if( key == 9){
+                    alert('Tab pressed');
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "l"){
+                        alert('matched');
                     $('#inputfield'+counter.toString()).val('ls');
                 }
 
