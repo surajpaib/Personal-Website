@@ -50,7 +50,7 @@
 
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
-                   
+
                         $('#inputfield'+counter.toString()).val('clear');
                     }
                 }
@@ -166,7 +166,7 @@
 
     jQuery.fn.putCursorAtEnd = function() {
   return this.each(function() {
-    $(this).focus();
+    $(this).focus()
     // If this function exists...
     if (this.setSelectionRange) {
       // ... then use it (Doesn't work in IE)
