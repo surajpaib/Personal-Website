@@ -25,7 +25,7 @@ SECRET_KEY = '4=h+ybb4#p47=m^o2q&ak0b_8szx0tfedj=dnkp+5)c0b&5t=f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['2d3d7f08.ngrok.io', 'personalterminal.herokuapp.com']
+ALLOWED_HOSTS = ['2d3d7f08.ngrok.io', 'personalterminal.herokuapp.com', 'surajpai.tech']
 
 
 # Application definition
