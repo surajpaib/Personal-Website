@@ -33,7 +33,9 @@
                             }
                             else if ( val == "p"){
 
-                                $('#inputfield'+counter.toString()).val('cat projects.txt').putCursorAtEnd();
+                                var input = $('#inputfield'+counter.toString());
+                                tmp = input.val('cat projects.txt'); input.focus().val("").blur().focus().val(tmp);
+
                             }
                             else if ( val == "e"){
 
