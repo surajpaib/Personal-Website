@@ -92,7 +92,7 @@
                     }
                     else if ($('#inputfield'+counter.toString()).val() == "help") {
                         counter += 1;
-                        listitem = '<p>Type out the following commands in the terminal to find out more, </p><br><table id="user-caption"><tbody><tr><td>ls</td><td>Lists files to explore for more information</td></tr><tr><td>cat filename</td><td>Displays content of the particular file</td></tr><tr><td>wget resume.pdf       </resume></td><td>Download resume in .pdf format</td></tr><tr><td>clear</td><td>Clear the display</td></tr></tbody></table><br>';
+                        listitem = '<p>Type out the following commands in the terminal to find out more, </p><br><table id="user-caption"><tbody><tr><td>ls</td><td>Lists files to explore for more information</td></tr><tr><td>cat filename</td><td>Displays content of the particular file</td></tr><tr><td>wget resume.pdf       </resume></td><td>Download resume in .pdf format</td></tr><tr><td>clear</td><td>Clear the display</td></tr></tbody></table><br><p> Example:  Type "cat education.txt" to find out more about Surajs education or "cat samples.git" to find out about projects on Github<br>';
                         $("#console").append(listitem);
                     }
                     else if ($('#inputfield'+counter.toString()).val() == "clear") {
