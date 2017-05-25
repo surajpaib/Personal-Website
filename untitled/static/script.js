@@ -34,7 +34,7 @@
                             else if ( val == "p"){
 
                                 var input = $('#inputfield'+counter.toString());
-                                input.focus().val("").blur().focus().val('cat projects.txt');
+                                input.focus().val("").blur().focus().val('cat projects.txt').focus();
 
                             }
                             else if ( val == "e"){
