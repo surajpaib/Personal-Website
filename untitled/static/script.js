@@ -44,8 +44,6 @@
 
                 }
                 if (key == 13) {
-
-                    if ()
                     slic = get_snippet($('#inputfield'+counter.toString()).val(), 0, 3);
                     slic2 = get_snippet($('#inputfield'+counter.toString()).val(), 0, 4);
 
