@@ -14,6 +14,8 @@
 
                 }
                 if (key == 13) {
+
+                    if ()
                     slic = get_snippet($('#inputfield'+counter.toString()).val(), 0, 3);
                     slic2 = get_snippet($('#inputfield'+counter.toString()).val(), 0, 4);
 
@@ -105,7 +107,7 @@
                     }
                 else {
                     error = "       Error: command  '" + $('#inputfield'+counter.toString()).val() + "' is not recognized. Please re-enter a valid command or type 'help' to view list of commands";
-                    $("#console").append(error);
+                    $("#console").append(error.toString());
                     $('#inputfield'+counter.toString()).remove();
 
                 }
