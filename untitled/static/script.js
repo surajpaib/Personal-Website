@@ -13,9 +13,8 @@
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
 
                         var SearchInput = $('#inputfield'+counter.toString()).val('clear');
-                        var strLength= SearchInput.val().length;
                         SearchInput.focus();
-                        SearchInput[0].setSelectionRange(strLength, strLength);
+                        SearchInput.onfocus = 'clear';
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
                             var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
