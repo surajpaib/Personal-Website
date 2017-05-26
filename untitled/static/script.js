@@ -12,9 +12,11 @@
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
 
-                        var SearchInput = $('#inputfield'+counter.toString()).val('clear');
+                        var SearchInput = $('#inputfield'+counter.toString());
+                        SearchInput.val('');
+                        SearchInput.val('clear');
                         SearchInput.focus();
-                        SearchInput.onfocus = 'clear';
+                        SearchInput.setSelectionRange(1000,1000);
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
                             var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
