@@ -12,11 +12,7 @@
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 2) == "cl"){
 
-                        var SearchInput = $('#inputfield'+counter.toString());
-                        SearchInput.val('');
-                        SearchInput.val('clear');
-                        SearchInput.focus();
-                        SearchInput.setSelectionRange(1000,1000);
+                        $('#inputfield'+counter.toString()).val('clear');
                     }
                     else if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "c"){
                             var val = get_snippet($('#inputfield'+counter.toString()).val(), 4, 5);
@@ -169,36 +165,3 @@
         var slic = text.toString().slice(l1, l2);
         return slic
     }
-
-
-(function($)
-{
-    jQuery.fn.putCursorAtEnd = function()
-    {
-    return this.each(function()
-    {
-        $(this).focus()
-
-        // If this function exists...
-        if (this.setSelectionRange)
-        {
-        // ... then use it
-        // (Doesn't work in IE)
-
-        // Double the length because Opera is inconsistent about whether a carriage return is one character or two. Sigh.
-        var len = $(this).val().length * 2;
-        this.setSelectionRange(len, len);
-        }
-        else
-        {
-        // ... otherwise replace the contents with itself
-        // (Doesn't work in Google Chrome)
-        $(this).val($(this).val());
-        }
-
-        // Scroll to the bottom, in case we're in a tall textarea
-        // (Necessary for Firefox and Google Chrome)
-        this.scrollTop = 999999;
-    });
-    };
-})(jQuery);
