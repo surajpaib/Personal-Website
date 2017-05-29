@@ -149,7 +149,7 @@
                     }
                 else {
                     error = "       Error: command  '" + $('#inputfield'+counter.toString()).val() + "' is not recognized. Please re-enter a valid command or type 'help' to view list of commands";
-                    $("#console").append_text(error.toString());
+                    $("#console").append(error.toString());
                     $('#inputfield'+counter.toString()).remove();
 
                 }
