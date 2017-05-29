@@ -142,14 +142,14 @@
                             link.click();
                         }
                         else{
-                            $('#console').append('Error: Invalid filename "'+ filename.toString() +'" with the "wget" command.');
+                            $('#console').appendText('Error: Invalid filename "'+ filename.toString() +'" with the "wget" command.');
                         }
                         counter += 1;
 
                     }
                 else {
                     error = "       Error: command  '" + $('#inputfield'+counter.toString()).val() + "' is not recognized. Please re-enter a valid command or type 'help' to view list of commands";
-                    $("#console").append(error.toString());
+                    $("#console").appendText(error.toString());
                     $('#inputfield'+counter.toString()).remove();
 
                 }
