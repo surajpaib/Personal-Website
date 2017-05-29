@@ -75,8 +75,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/untitled/static/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-424">
-              <caret line="87" column="25" lean-forward="true" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+            <state relative-caret-position="368">
+              <caret line="84" column="244" lean-forward="true" selection-start-line="84" selection-start-column="244" selection-end-line="84" selection-end-column="244" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -1010,8 +1010,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/static/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-424">
-          <caret line="87" column="25" lean-forward="true" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+        <state relative-caret-position="368">
+          <caret line="84" column="244" lean-forward="true" selection-start-line="84" selection-start-column="244" selection-end-line="84" selection-end-column="244" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
