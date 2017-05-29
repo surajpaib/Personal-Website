@@ -60,3 +60,7 @@ body {
     #orange-color{
         color:coral;
     }
+    #headline{
+        font-style: oblique;
+        color: gold;
+    }

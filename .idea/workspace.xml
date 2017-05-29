@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e8bd615-330c-4b43-be10-9117343c7946" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled/static/script.js" afterPath="$PROJECT_DIR$/untitled/static/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled/static/style.css" afterPath="$PROJECT_DIR$/untitled/static/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +24,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/untitled/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
+            <state relative-caret-position="502">
               <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
@@ -33,7 +34,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PersonalPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="308">
               <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
@@ -72,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/untitled/static/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+            <state relative-caret-position="251">
+              <caret line="93" column="134" lean-forward="false" selection-start-line="93" selection-start-column="134" selection-end-line="93" selection-end-column="134" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -84,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/untitled/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="854">
-              <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+            <state relative-caret-position="480">
+              <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -174,9 +175,9 @@
         <option value="$PROJECT_DIR$/untitled/urls.py" />
         <option value="$PROJECT_DIR$/PersonalPage/urls.py" />
         <option value="$PROJECT_DIR$/templates/style.css" />
-        <option value="$PROJECT_DIR$/untitled/static/style.css" />
         <option value="$PROJECT_DIR$/templates/terminal.html" />
         <option value="$PROJECT_DIR$/untitled/static/script.js" />
+        <option value="$PROJECT_DIR$/untitled/static/style.css" />
       </list>
     </option>
   </component>
@@ -946,16 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersonalPage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/untitled/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -984,22 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/terminal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1010,11 +985,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/static/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+        <state relative-caret-position="251">
+          <caret line="93" column="134" lean-forward="false" selection-start-line="93" selection-start-column="134" selection-end-line="93" selection-end-column="134" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersonalPage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
