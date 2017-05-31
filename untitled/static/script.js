@@ -6,7 +6,7 @@
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38) {
-                    $('#inputfield' + counter.toString()).val($('#inputfield' + counter.toString()).val());
+                    $('#inputfield' + counter.toString()).val($('#inputfield' + (counter - 1).toString()).val());
                     $('#inputfield' + counter.toString()).focus;
                 }
                 if( key == 9){
@@ -158,7 +158,6 @@
                 }
                 cmdhead = '<table class="inputtable"><tbody><tr><td><div id="a">surajpai@root:</div></td><td class="inputtd"><input id="inputfield' + counter.toString() + '" name="q" type="text" class="cmdline" autocomplete="off" value:""/></td></tr></tbody></table>';
                 $("#console").append(cmdhead);
-                alert(history);
 
             }
             $('#inputfield'+counter.toString()).focus();
