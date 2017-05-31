@@ -6,12 +6,15 @@
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38){
+
                     $('#inputfield'+counter.toString()).val($('#inputfield'+(counter-1).toString()).val());
                     $('#inputfield'+counter.toString()).focus;
+                    counter = counter -1;
                 }
                 if (key == 40){
                     $('#inputfield'+counter.toString()).val($('#inputfield'+(counter+1).toString()).val());
                     $('#inputfield'+counter.toString()).focus;
+                    counter = counter + 1;
                 }
                 if( key == 9){
 
