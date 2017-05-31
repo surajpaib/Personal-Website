@@ -3,28 +3,11 @@
  */
   $('#inputfield0').focus();
     var counter = 0;
-    var history = 0;
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38) {
-                    alert(history);
-                    if (history > 0) {
-
-                    history = history - 1;
-                    }
-                    $('#inputfield' + counter.toString()).val($('#inputfield'+history.toString()).val());
+                    $('#inputfield' + counter.toString()).val($('#inputfield' + counter.toString()).val());
                     $('#inputfield' + counter.toString()).focus;
-                }
-                if (key == 40){
-                    alert(history);
-
-                    if (history > 0) {
-
-                    history = history + 1;
-                    }
-                    $('#inputfield'+counter.toString()).val($('#inputfield'+history.toString()).val());
-                    $('#inputfield'+counter.toString()).focus;
-
                 }
                 if( key == 9){
 
@@ -84,18 +67,15 @@
 
                     if ($('#inputfield'+counter.toString()).val() == "ls") {
                         counter += 1;
-                        history += 1;
                         listitem = '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>education.txt</td><td>achievements.txt</td></tr><tr><td>projects.txt</td><td>samples.git</td><td>skills.txt</td></tr><td>resume.pdf</tbody></table><br>';
                         $("#console").append(listitem);
                     }
                     else if ($('#inputfield'+counter.toString()).val() == "help") {
-                        history += 1;
                         counter += 1;
                         listitem = '<p>Type out the following commands in the terminal to find out more, </p><br><table id="user-caption"><tbody><tr><td>ls</td><td>Lists files to explore for more information</td></tr><tr><td>cat filename</td><td>Displays content of the particular file</td></tr><tr><td>wget resume.pdf       </resume></td><td>Download resume in .pdf format</td></tr><tr><td>clear</td><td>Clear the display</td></tr></tbody></table><br><p> Example:  Type "cat education.txt" to find out more about Surajs education or "cat samples.git" to find out about projects on Github<br>';
                         $("#console").append(listitem);
                     }
                     else if ($('#inputfield'+counter.toString()).val() == "clear") {
-                        history += 1;
                         counter += 1;
                         document.getElementById('console').innerHTML = '';
                     }
@@ -153,7 +133,6 @@
                             $('#console').append('<br> Error: Invalid filename "'+ filename.toString() +'" attached to "cat" command');
 
                         }
-                        history += 1;
                         counter += 1;
                 }
                 else if ( slic2 == "wget"){
@@ -168,7 +147,6 @@
                         else{
                             $('#console').append('Error: Invalid filename "'+ filename.toString() +'" with the "wget" command.');
                         }
-                        history += 1;
                         counter += 1;
 
                     }
