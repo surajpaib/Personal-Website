@@ -3,11 +3,18 @@
  */
   $('#inputfield0').focus();
     var counter = 0;
+    var history = 0;
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38){
-                    $('#inputfield'+counter.toString()).val($('#inputfield'+(counter-1).toString()).val());
-                    $('#inputfield'+counter.toString()).focus;
+                    $('#inputfield'+history.toString()).val($('#inputfield'+(history-1).toString()).val());
+                    $('#inputfield'+history.toString()).focus;
+                    history -= 1;
+                }
+                if (key == 38){
+                    $('#inputfield'+history.toString()).val($('#inputfield'+(history-1).toString()).val());
+                    $('#inputfield'+history.toString()).focus;
+                    history += 1;
                 }
                 if( key == 9){
 
@@ -162,7 +169,7 @@
 
             }
             $('#inputfield'+counter.toString()).focus();
-
+            history = counter;
         }
 
     function get_snippet(text, l1, l2) {
