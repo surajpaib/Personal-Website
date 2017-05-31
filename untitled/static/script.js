@@ -7,21 +7,21 @@
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38) {
-
-                    $('#inputfield' + counter.toString()).val($('#inputfield' + (history - 1).toString()).val());
-                    $('#inputfield' + counter.toString()).focus;
                     if (history > 0) {
 
                     history = history - 1;
                     }
+                    $('#inputfield' + counter.toString()).val($('#inputfield' + (history).toString()).val());
+                    $('#inputfield' + counter.toString()).focus;
                 }
                 if (key == 40){
-                    $('#inputfield'+counter.toString()).val($('#inputfield'+(history + 1).toString()).val());
-                    $('#inputfield'+counter.toString()).focus;
                     if (history > 0) {
 
                     history = history + 1;
                     }
+                    $('#inputfield'+counter.toString()).val($('#inputfield'+(history).toString()).val());
+                    $('#inputfield'+counter.toString()).focus;
+
                 }
                 if( key == 9){
 
