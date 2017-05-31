@@ -12,7 +12,7 @@
                     $('#inputfield'+history.toString()).focus;
                     history -= 1;
                 }
-                if (key == 38){
+                if (key == 40){
                     $('#inputfield'+history.toString()).val($('#inputfield'+(history-1).toString()).val());
                     $('#inputfield'+history.toString()).focus;
                     history += 1;
