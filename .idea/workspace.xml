@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e8bd615-330c-4b43-be10-9117343c7946" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled/static/script.js" afterPath="$PROJECT_DIR$/untitled/static/script.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/untitled/static/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            <state relative-caret-position="-88">
+              <caret line="10" column="85" lean-forward="false" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -84,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -148,6 +148,8 @@
       <find>prompt</find>
       <find>&lt;em&gt;</find>
       <find>&lt;br&gt;&lt;li&gt;</find>
+      <find>counter += 1</find>
+      <find>counter</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;strong&gt;</replace>
@@ -174,8 +176,8 @@
         <option value="$PROJECT_DIR$/templates/style.css" />
         <option value="$PROJECT_DIR$/templates/terminal.html" />
         <option value="$PROJECT_DIR$/untitled/static/style.css" />
-        <option value="$PROJECT_DIR$/untitled/static/script.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/untitled/static/script.js" />
       </list>
     </option>
   </component>
@@ -1000,21 +1002,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untitled/static/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled/static/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="10" column="85" lean-forward="false" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

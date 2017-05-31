@@ -8,15 +8,15 @@
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38) {
 
-                    $('#inputfield' + history.toString()).val($('#inputfield' + (history - 1).toString()).val());
-                    $('#inputfield' + history.toString()).focus;
+                    $('#inputfield' + counter.toString()).val($('#inputfield' + (history - 1).toString()).val());
+                    $('#inputfield' + counter.toString()).focus;
                     if (history > 0) {
 
                     history = history - 1;
                     }
                 }
                 if (key == 40){
-                    $('#inputfield'+counter.toString()).val($('#inputfield'+(counter+1).toString()).val());
+                    $('#inputfield'+counter.toString()).val($('#inputfield'+(history + 1).toString()).val());
                     $('#inputfield'+counter.toString()).focus;
                     if (history > 0) {
 
