@@ -4,6 +4,7 @@
   $('#inputfield0').focus();
     var counter = 0;
     var history = 0;
+    history = counter;
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38){
@@ -169,7 +170,6 @@
 
             }
             $('#inputfield'+counter.toString()).focus();
-            history = counter;
         }
 
     function get_snippet(text, l1, l2) {
