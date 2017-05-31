@@ -3,19 +3,15 @@
  */
   $('#inputfield0').focus();
     var counter = 0;
-    var history = 0;
-    history = counter;
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
                 if (key == 38){
-                    $('#inputfield'+history.toString()).val($('#inputfield'+(history-1).toString()).val());
-                    $('#inputfield'+history.toString()).focus;
-                    history = history - 1;
+                    $('#inputfield'+counter.toString()).val($('#inputfield'+(counter-1).toString()).val());
+                    $('#inputfield'+counter.toString()).focus;
                 }
                 if (key == 40){
-                    $('#inputfield'+history.toString()).val($('#inputfield'+(history-1).toString()).val());
-                    $('#inputfield'+history.toString()).focus;
-                    history =history + 1;
+                    $('#inputfield'+counter.toString()).val($('#inputfield'+(counter+1).toString()).val());
+                    $('#inputfield'+counter.toString()).focus;
                 }
                 if( key == 9){
 
