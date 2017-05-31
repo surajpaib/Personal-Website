@@ -5,6 +5,10 @@
     var counter = 0;
         window.onkeydown = function (e) {
                var key = e.keyCode ? e.keyCode : e.which;
+                if (key == 38){
+                    $('#inputfield'+counter.toString()).val($('#inputfield'+(counter-1).toString()).val());
+                    $('#inputfield'+counter.toString()).focus;
+                }
                 if( key == 9){
 
                     if ( get_snippet($('#inputfield'+counter.toString()).val(), 0, 1) == "l"){
