@@ -131,7 +131,7 @@
                         }
                         else if ( filename.toString() == 'hackathons.txt'){
                             var hac1 = '<br><strong><span id="sub-headline"> Haptiks Botathon, December 2016 </span></strong><p>Participated as a team of two and built "LaunchBot", a facebook messenger bot that lets users create landing pages for their bots or mobile apps in under a minute with levels of customization. <br> I worked mostly with the NLP and business flows of the bot. Tools used: API.ai, Django </p>';
-                            var hac2 = '<br><strong><span id="sub-headline"> AngelHack Global Series Bangalore, June 2017</span> </strong><p>Participated in a team of 5 and built "HungerHero", a Charity as a Service platform to help organizations give to the society with a miminal cost<br> I took complete charge of the chatbot interface and interactions with the delivery backend. Tools used: Graph API, Django <br>Link to project: http://www.hackathon.io/projects/15692</p>'
+                            var hac2 = '<br><strong><span id="sub-headline"> AngelHack Global Series Bangalore, June 2017</span> </strong><p>Participated in a team of 5 and built "HungerHero", a Charity as a Service platform to help organizations give to the society with a miminal cost<br> I took complete charge of the chatbot interface and interactions with the delivery backend. Tools used: Graph API, Django <br><a href="http://www.hackathon.io/projects/15692">Link to Project</a></p>';
                             $('#console').append(hac1 + hac2);
                         }
                         else {
