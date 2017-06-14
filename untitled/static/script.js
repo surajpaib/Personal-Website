@@ -67,12 +67,12 @@
 
                     if ($('#inputfield'+counter.toString()).val() == "ls") {
                         counter += 1;
-                        listitem = '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>education.txt</td><td>achievements.txt</td></tr><tr><td>projects.txt</td><td>samples.git</td><td>skills.txt</td></tr><td>resume.pdf</tbody></table><br>';
+                        listitem = '<table id="user-caption"><tbody><tr><td>experience.txt</td><td>education.txt</td><td>achievements.txt</td></tr><tr><td>projects.txt</td><td>samples.git</td><td>skills.txt</td></tr><td>resume.pdf</td><td>hackathons.txt</td></tbody></table><br>';
                         $("#console").append(listitem);
                     }
                     else if ($('#inputfield'+counter.toString()).val() == "help") {
                         counter += 1;
-                        listitem = '<p>Type out the following commands in the terminal to find out more, </p><br><table id="user-caption"><tbody><tr><td>ls</td><td>Lists files to explore for more information</td></tr><tr><td>cat filename</td><td>Displays content of the particular file</td></tr><tr><td>wget resume.pdf       </resume></td><td>Download resume in .pdf format</td></tr><tr><td>clear</td><td>Clear the display</td></tr></tbody></table><br><p> Example:  Type "cat education.txt" to find out more about Surajs education or "cat samples.git" to find out about projects on Github<br>';
+                        listitem = '<p>Type out the following commands in the terminal to find out more, </p><br><table id="user-caption"><tbody><tr><td><span id="sub-headline">ls</span></td><td>Lists files to explore for more information</td></tr><tr><td><span id="sub-headline">cat filename</span></td><td>Displays content of the particular file</td></tr><tr><td><span id="sub-headline">wget resume.pdf</span></td><td>Download resume in .pdf format</td></tr><tr><td><span id="sub-headline">clear</span></td><td>Clear the display</td></tr></tbody></table><br><p> Example:  Type "cat education.txt" to find out more about Surajs education or "cat samples.git" to find out about projects on Github<br>I currently do not support options for the commands! Check back soon for more functionality';
                         $("#console").append(listitem);
                     }
                     else if ($('#inputfield'+counter.toString()).val() == "clear") {
@@ -129,10 +129,16 @@
                             var course = '<br><ul>Undergraduate Courses<li>Soft Computing Technologies<li> Linux and Shell Scripting <li> Digital Signal Processing<li> Information Theory</ul><ul>Online Courses<li>Machine Learning by Andrew Ng<li>Deep Learning by Google<li> Foundations of Deep Learning ( Udacity )<li> IoT Engineering by Encypher Technologies​</ul>';
                             $('#console').append(course);
                         }
+                        else if ( filename.toString() == 'hackathons.txt'){
+                            var hac1 = '<br><strong><span id="sub-headline"> Haptiks Botathon, December 2016 </span></strong><p>Participated as a team of two and built "LaunchBot", a facebook messenger bot that lets users create landing pages for their bots or mobile apps in under a minute with levels of customization. <br> I worked mostly with the NLP and business flows of the bot. Tools used: API.ai, Django </p>';
+                            var hac2 = '<br><strong><span id="sub-headline"> AngelHack Global Series Bangalore, June 2017</span> </strong><p>Participated in a team of 5 and built "HungerHero", a Charity as a Service platform to help organizations give to the society with a miminal cost<br> I took complete charge of the chatbot interface and interactions with the delivery backend. Tools used: Graph API, Django <br>Link to project: http://www.hackathon.io/projects/15692</p>'
+                            $('#console').append(hac1 + hac2);
+                        }
                         else {
                             $('#console').append('<br> Error: Invalid filename "'+ filename.toString() +'" attached to "cat" command');
 
                         }
+
                         counter += 1;
                 }
                 else if ( slic2 == "wget"){
