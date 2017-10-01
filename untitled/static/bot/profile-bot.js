@@ -8,7 +8,7 @@ botui.message
   .bot('Hey! I am Resume Bot!')
     .then(
     botui.message.bot({delay: 1000, content:"I'll help you get through Suraj Pai's Resume!!"})).then(
-    botui.message.bot({delay: 2000, content:"But First, Let's START with your name and description"})).then(
+    botui.message.bot({delay: 2000, content:"But First, Let's START with your name"})).then(
     function () {
       return botui.action.text({
         delay: 3000,
@@ -16,12 +16,8 @@ botui.message
           placeholder: 'Name'
         }
       })}).then(function (res1) {
-      return res1, botui.action.text({
-        delay: 1000,
-        action: {
-          placeholder: 'Description'
-        }
-      })}).then(function (res1, res2) {
+      return res1
+      }).then(function (res1) {
 
     botui.message.bot({delay: 1000, content:"Thanks,  "+ res1.value + "!"})
 
@@ -35,7 +31,7 @@ var showEducation = function () {
 };
 
 var showExperience = function () {
-    botui.message.add({delay: 1000, content:' Suraj has taken up multiple roles to provide him with perspective and experience.'}).then( botui.message.add({delay: 1500, content:' He is currently a Computer Vision Engineer at Cognitive Machines where he works on applying image processing to tackle real world problem sets.'})).then( botui.message.add({delay: 2000, content:' Previously, he was a Research Intern at MIT Practice School - Manipal; a Social Innovator at Digital Impact Square, Nashik; And a participant at the Stanford Crowd Course Initiative.'})).then(botui.message.add({delay:2500, content:"Check out Suraj's Resume to know more"}))
+    botui.message.add({delay: 1000, content:' Suraj has taken up multiple roles to provide him with perspective and experience.'}).then( botui.message.add({delay: 1500, content:' He is currently an Associate Engineer at Cognitive Machines where he works on applying Image processing and Machine Learning to tackle real world problem sets.'})).then( botui.message.add({delay: 2000, content:' Previously, he was a Research Intern at MIT Practice School - Manipal; a Social Innovator at Digital Impact Square, Nashik; And a participant at the Stanford Crowd Course Initiative.'})).then(botui.message.add({delay:2500, content:"Check out Suraj's Resume to know more"}))
 
 
 };
