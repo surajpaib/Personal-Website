@@ -149,7 +149,7 @@
                         filename = get_snippet($('#inputfield'+counter.toString()).val(), 5, final_len1);
                         if (filename.toString() == "resume.pdf"){
                             var link = document.createElement('a');
-                            link.href = 'https://www.pdf-archive.com/2017/06/05/resume-1-1/resume-1-1.pdf';
+                            link.href = 'surajpai.tech/resume';
                             link.download = 'SurajPaiCV.pdf';
                             link.click();
                         }
