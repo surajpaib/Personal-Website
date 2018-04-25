@@ -18,8 +18,9 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^$', include('PersonalPage.urls')),
+    url(r'^$', include('ResumePage.urls')),
     url(r'^bot/', include('botpage.urls')),
+    url(r'^terminal/', include('PersonalPage.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^resume/', views.resume, name='resume'),
     url(r'^demo/', include('demoweb.urls'))
